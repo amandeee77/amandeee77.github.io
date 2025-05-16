@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Active state for navigation links
   const sections = document.querySelectorAll("section");
   window.addEventListener("scroll", () => {
-    let scrollPosition = window.scrollY + 100; // Offset for better highlight timing
+    let scrollPosition = window.scrollY + 100;
     
     sections.forEach(section => {
       if (scrollPosition >= section.offsetTop && 
@@ -29,17 +29,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Contact Form Validation (Optional)
-  const contactForm = document.querySelector("#contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", event => {
-      const email = document.querySelector("#email").value.trim();
-      const message = document.querySelector("#message").value.trim();
-      
-      if (!email || !message) {
-        event.preventDefault();
-        alert("Please fill out all fields before submitting.");
+  // Interactive Hero Section (Typewriter Effect)
+  const tagline = document.querySelector(".tagline");
+  if (tagline) {
+    const text = "Creative Developer & Problem Solver";
+    let index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        tagline.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+    
+    tagline.textContent = "";
+    typeEffect();
+  }
+
+  // Subtle Animations for Sections
+  const animatedSections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
       }
     });
-  }
+  }, { threshold: 0.5 });
+
+  animatedSections.forEach(section => observer.observe(section));
+
+  // Custom Cursor Effect
+  const cursor = document.createElement("div");
+  cursor.classList.add("custom-cursor");
+  document.body.appendChild(cursor);
+
+  document.addEventListener("mousemove", event => {
+    cursor.style.top = `${event.clientY}px`;
+    cursor.style.left = `${event.clientX}px`;
+  });
+
+  // SEO Optimization - Dynamic Title Update
+  document.title = "Amanda Morgan - Web Developer | Portfolio";
 });
