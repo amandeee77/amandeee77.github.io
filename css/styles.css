@@ -1,8 +1,8 @@
 :root {
-    --background-light: #f0f0f0;
+    --background: #f3e9ff;
     --text-dark: #333333;
-    --primary-color: #4A90E2;
-    --link-color: #007BFF;
+    --primary-color: #581c7a;
+    --link-color: #351b3f;
     --container-bg: #FFFFFF;
     --border-highlight: #D9E8FC;
   }
@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
     color: var(--text-dark);
-    background-color: var(--background-light);
+    background: linear-gradient(135deg, #d9c2f2, #f3e9ff);
     display: flex;
     justify-content: center;
     align-items: center;
