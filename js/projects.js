@@ -34,6 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(error => {
       console.error("Error fetching GitHub repos:", error);
-      projectSection.innerHTML += `<p>Couldn't load project data. Please try again later.</p>`;
+      projectSection.innerHTML += `<p>Couldn't load project data.</p>`;
     });
 });
