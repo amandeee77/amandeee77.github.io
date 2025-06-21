@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetSection = document.getElementById(targetId);
       
       window.scrollTo({
-        top: targetSection.offsetTop - 50, // Adjusted for header height
+        top: targetSection.offsetTop - 50,
         behavior: "smooth"
       });
     });
@@ -46,8 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     tagline.textContent = "";
     typeEffect();
   }
-
-  // Subtle Animations for Sections
   const animatedSections = document.querySelectorAll("section");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

@@ -144,6 +144,19 @@
       font-size: 24px;
     }
   }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
   
 
 
