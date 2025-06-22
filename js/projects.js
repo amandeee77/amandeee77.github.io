@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then(repos => {
-      // Optional: Filter out forks or archived repos
       const filteredRepos = repos.filter(repo => !repo.fork && !repo.archived);
 
       const grid = document.createElement("div");
