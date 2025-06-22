@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const projectSection = document.querySelector("main");
+  const projectSection = document.querySelector(".projects-grid");
 
   fetch("https://api.github.com/users/amandeee77/repos")
     .then(response => {

@@ -1,145 +1,110 @@
 body {
-    background-color: #f0f0f0;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to bottom right, #7b1fa2, #e1bee7);
 }
 
-@keyframes scaleUp {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-.profile-article {
-    animation: scaleUp 0.5s ease-in-out;
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/*Styles for article container*/
-.profile-article {
-    width: 600px;
-    margin: 50px auto;
-    padding: 30px;
-    border: 2px solid black;
-    border-radius: 20px;
-    background-color: #007bff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: white;
-}
-
-/*Profile name*/
-.profile-name {
-    font-size: 56px;
-    font-weight: bold;
+h1 {
+    color: #65267e;
     text-align: center;
-    margin-bottom: 50px;
 }
 
-/*Profile picture*/
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+h2 {
+    color: #59207a;
 }
 
-/*Profile picture hover effect*/
-.profile-pic:hover {
-    transform: scale(1.05);
+h5 {
+    color: #5c2177;
 }
 
-/*Flex container for boxes*/
-.info-container {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
+.header {
+    text-align: center;
 }
 
-/*Clickable links*/
-.links-box {
-   display: inline-block;
-   padding: 10px 15px;
-   background-color: #fff;
-   color: #007bff;
-   border-radius: 5px;
-   text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+.header h1 {
+    margin: 10px 0;
 }
 
-/*Add hover effect to items in links box*/
-.links-box a:hover {
-    background-color: #007bff;
+.contact {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.contact a {
+    color: #56267e;
+    text-decoration: none;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.item {
+    margin-bottom: 15px;
+}
+
+.item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.item p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    display: inline-block;
+    background: #007bff;
     color: #fff;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+    border-radius: 4px;
 }
 
-/*Contact box and company box and links box*/
-.contact-box, .company-box, .links-box {
-    width: 100%;
-    padding: 5px;
-    margin: 2px 0;
-    background-color: #007bff;
-    text-align: center;
-}
+/* Responsive tweaks for smaller screens */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin: 10px;
+  }
 
-/*Media query for desktop (768 and up)*/
-@media screen and (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin:0;
-    }
+  .projects-grid .repo {
+    padding: 0.75rem;
+  }
 
-    .profile-article {
-        width: 700px;
-        padding: 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;  
-}
-
-.left-container {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    padding-left: 20px;
-}
-
-.profile-name {
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 50px;;
-}
-
-.right-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-}
-
-.profile-pic {
-    display: block;
-    margin: 0 auto;
-        margin-right: 20px;
-        transform: translateX(0px)
-    }
-    .profile-pic:hover {
-        transform: scale(1.08);
-    }
-
+  .skills ul li {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
 }
 
 
