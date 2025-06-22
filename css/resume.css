@@ -1,0 +1,63 @@
+/* Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #d1c4e9, #ede7f6);
+  color: #333;
+  padding: 2rem;
+}
+
+/* Container Grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #ffffffdd;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Section Styling */
+.header {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.header h1 {
+  font-size: 2.5rem;
+  color: #6a1b9a;
+}
+.contact a {
+  color: #7b1fa2;
+  text-decoration: none;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  background: #f3e5f5;
+  border-left: 4px solid #7e57c2;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.section h2 {
+  color: #4a148c;
+  margin-bottom: 1rem;
+}
+
+.item {
+  margin-bottom: 1rem;
+}
+
+.skills ul, .projects ul {
+  padding-left: 1.2rem;
+}
+
+.skills li, .projects li {
+  margin-bottom: 0.5rem;
+}
